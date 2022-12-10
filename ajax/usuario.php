@@ -129,7 +129,7 @@ switch ($_GET["op"]) {
 	case 'salir':
 	   //limpiamos la variables de la secion
 	session_unset();
-
+		
 	  //destruimos la sesion
 	session_destroy();
 		  //redireccionamos al login

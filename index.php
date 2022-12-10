@@ -1,5 +1,5 @@
 <?php 
 //redireccionar a la vista de login
 
-header('location: vistas/loginn.html');
+header('location: vistas/nosotros.php');
  ?>

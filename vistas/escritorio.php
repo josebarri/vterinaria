@@ -23,7 +23,7 @@ if (!isset($_SESSION['nombre'])) {
             <div class="box-header with-border">
               <h4>Escritorio</h4>
               <div class="box-tools pull-right">
-                <img src="logo.ico" align="right" width="40" height="40">
+              <img src="img/veterinario.png" width="45" height="45" alt="">
               </div>
             </div>
             <!--box-header-->
@@ -49,7 +49,7 @@ if (!isset($_SESSION['nombre'])) {
                     <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
                     <div class="info-box-content">
-                      <span class="info-box-text">Likes</span>
+                      <span class="info-box-text">Likesdjfk</span>
                       <span class="info-box-number">41,410</span>
                     </div>
                     <!-- /.info-box-content -->

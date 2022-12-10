@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>La Parcela | Login</title>
-  <link rel="icon" href="logo.ico">
+  <link rel="icon" type="image/png" href="img/veterinario.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../public/css/bootstrap.min.css">
   <!-- Font Awesome -->
-
+  <!-- JavaScript Fontawesome-->
+  <script src="https://kit.fontawesome.com/1b0d4fcd0a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../public/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../public/css/_all-skins.min.css">
   <!-- Morris chart --><!-- Daterange picker -->
 </head>
+
 <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"> Consultorio Veterinario <strong> La Parcela </strong></a>
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="nosotros.php"> Consultorio Veterinario <strong> La Parcela </strong></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body ">
+      <p class="login-box-msg">Ingresa tus datos de Acceso</p>
+
+      <form method="post" id="frmAcceso">
+
+
+        <div class="form-group has-feedback">
+          <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario" autocomplete="off">
+          <span class="fa fa-user form-control-feedback"></span>
+        </div>
+
+
+        <div class="form-group has-feedback ">
+          <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
+          <span class="fa fa-key form-control-feedback"></span>
+          
+          
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+
+          </div>
+
+
+          <!-- /.col -->
+          <div class="col-xs-4">
+
+            <button type="submit" class="btn btn-primary fw-bold">
+              Ingresar <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+          </div>
+
+
+
+          <div class="col-xs-8">
+            
+            <img src="img/veterinario.png" align="right" width="45" height="45" alt="">
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      
+
+    </div>
+    <!-- /.login-box-body -->
   </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Ingresa tus datos de Acceso</p>
+  <!-- /.login-box -->
 
-    <form  method="post" id="frmAcceso">
-
-
-      <div class="form-group has-feedback">
-          <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario" autocomplete="off" >
-        <span class="fa fa-user form-control-feedback"></span>
-      </div>
-
-
-      <div class="form-group has-feedback">
-        <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
-        <span class="fa fa-key form-control-feedback"></span>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-        
-        </div>
-
-
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-        </div>
-
-
-        
-        <div class="col-xs-8">
-          <img src="logo.ico" align="right" width="50" height="50" >
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
-
-  </div>
-  <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery 3 -->
-<script src="../public/js/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<!-- Bootstrap 3.3.7 -->
-<script src="../public/js/bootstrap.min.js"></script>
-<script src="../public/js/bootbox.min.js"></script>
-<script src="scripts/login.js"></script>
-<!-- iCheck -->
+  <!-- jQuery 3 -->
+  <script src="../public/js/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../public/js/bootstrap.min.js"></script>
+  <script src="../public/js/bootbox.min.js"></script>
+  <script src="scripts/login.js"></script>
+  <!-- iCheck -->
 
 </body>
+
 </html>

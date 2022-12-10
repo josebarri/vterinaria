@@ -20,7 +20,7 @@ if (!isset($_SESSION['nombre'])) {
                         <div class="box-header with-border">
                             <h1 class="box-title">Gestion de Medicamentos <button class="btn btn-success" onclick="mostrarform(true)" id="btnagregar"><i class="fa fa-plus-circle"></i> Agregar</button> </h1>
                             <div class="box-tools pull-right">
-                                <img src="logo.ico" align="right" width="40" height="40">
+                            <img src="img/veterinario.png" width="45" height="45" alt="">
                             </div>
                         </div>
                         <!--box-header-->

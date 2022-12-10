@@ -8,13 +8,14 @@ if (strlen(session_id())<1)
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="img/veterinario.png">
   <title>Veterinaria | La Parcela </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../public/css/bootstrap.min.css">
   <!-- Font Awesome -->
-<link rel="icon" href="logo.ico">
+
   <link rel="stylesheet" href="../public/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
@@ -47,10 +48,11 @@ if (strlen(session_id())<1)
     <a href="escritorio.php" class="logo">
       
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>La</b> Parcela</span>
+      <span class="logo-mini"><b><img src="img/veterinario.png" width="40" height="40" alt=""></b> Parcela</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>La</b> Parcela</span>
-       <img src="logo.ico" align="right" width="40" height="40" >
+      
+      <span class="logo-lg"> <b><img src="img/veterinario.png" width="45" height="45" alt=""></b> La Parcela</span>
+      
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -126,10 +128,7 @@ if (strlen(session_id())<1)
         </li>';
 }
 
-{
-  echo ' <li><a href="atendercita.php"><i class="fa fa-solid fa-clipboard-user"></i>  <span> Atender Citas</span></a>
-        </li>';
-}
+
 {
   echo ' <li><a href="medicamento.php"><i class="fa fa-sharp fa-solid fa-capsules"></i> <span> Medicamentos</span></a>
         </li>';
@@ -161,6 +160,10 @@ if (strlen(session_id())<1)
         </li>';
 }
 
+{
+  echo ' <li><a href="cerrar.php"><i class="fa fa-brands fa-chrome"></i>  <span>sitio web</span></a>
+        </li>';
+}
 
 
         ?>

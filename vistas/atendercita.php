@@ -45,7 +45,6 @@ if (!isset($_SESSION['nombre'])) {
                 $resultado = $conexion->query($sql);
 
                 if ($conexion->errno) {
-                 
                 }
 
                 if ($resultado->num_rows > 0) {
