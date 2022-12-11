@@ -21,7 +21,7 @@ $detalle = mysqli_fetch_assoc($clientes);
 
 $pdf->Cell(195, 5, utf8_decode("La Parcela"), 0, 1, 'C');
 
-// $pdf->Image("", 10, 9, 65, 25, 'PNG');
+$pdf->Image("img/veterinario.png", 10, 9, 65, 25, 'PNG');
 $pdf->Cell(190, 5, utf8_decode("Id Mascota "), 0, 0, 'R');
 $pdf->Ln();
 $pdf->Cell(150, 5, utf8_decode(""), 0, 0, 'R');

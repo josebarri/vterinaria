@@ -61,7 +61,7 @@ switch ($_GET["op"]) {
             "6"=>$reg->especie,
             "7"=>$reg->raza,
             "8"=>$reg->color,
-			"9"=>  '<a href="../pdf/historial.php?id=('.$reg->id_mascota.')  "class="btn btn-success btn-xs"> Ver historial</a> '
+			"9"=>  '<a href="../pdf/historiaclinica.php?id=('.$reg->id_mascota.')  "class="btn btn-success btn-xs"> Ver historial</a> '
 
               );
 		}

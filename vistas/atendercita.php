@@ -29,9 +29,15 @@ if (!isset($_SESSION['nombre'])) {
               </div>
 
 
-              <h1>Formulario de Atencion de Citas</h1>
+              <h1>Esta Cita ya fue Atendida</h1>
               <!--box-header-->
+              
               <!--centro-->
+              <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      
+                        <a href="cita.php" class="btn btn-danger" type="button" id="btnCancelar"><i class="fa fa-arrow-circle-left"></i> Regresar</a>
+
+                      </div>
 
               <?php
               if (!isset($_GET["id_cita"])) {
