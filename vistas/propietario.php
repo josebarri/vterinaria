@@ -55,29 +55,29 @@ if (!isset($_SESSION['nombre'])) {
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Número Documento</label>
                   <input class="form-control" type="hidden" name="id_propietario" id="id_propietario">
-                  <input class="form-control" type="text" name="num_documento" id="num_documento" placeholder="Número de Documento" require>
+                  <input class="form-control" type="text" name="num_documento" id="num_documento" placeholder="Número de Documento" required>
                 </div>
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Nombres</label>
-                  <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre del propietario" require>
+                  <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre del propietario" required>
                 </div>
 
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Telefono</label>
-                  <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Número de Telefono" require>
+                  <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Número de Telefono" required>
                 </div>
 
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Direccion</label>
-                  <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Direccion" require>
+                  <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Direccion" required>
 
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Email</label>
-                  <input class="form-control" type="email" name="email" id="email" placeholder="Email" require>
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
                 </div>
 
 
@@ -111,6 +111,7 @@ if (!isset($_SESSION['nombre'])) {
 
   require 'footer.php';
   ?>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="scripts/propietario.js"></script>
 <?php
 }

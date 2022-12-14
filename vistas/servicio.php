@@ -57,7 +57,7 @@ if (!isset($_SESSION['nombre'])) {
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                   <label for="">Descripcion</label>
-                  <input class="form-control" type="text" name="descripcion" id="descripcion" maxlength="256" placeholder="Descripcion del servicio">
+                  <input class="form-control" type="text" name="descripcion" id="descripcion" maxlength="256" placeholder="Descripcion del servicio" required>
 
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
@@ -86,6 +86,7 @@ if (!isset($_SESSION['nombre'])) {
 
   require 'footer.php'
   ?>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../public/js/JsBarcode.all.min.js"></script>
   <script src="../public/js/jquery.PrintArea.js"></script>
   <script src="scripts/servicio.js"></script>

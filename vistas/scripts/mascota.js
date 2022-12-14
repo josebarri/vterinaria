@@ -91,9 +91,15 @@ function guardaryeditar(e){
      	processData: false,
 
      	success: function(datos){
-     		bootbox.alert(datos);
      		mostrarform(false);
      		tabla.ajax.reload();
+			 Swal.fire({
+				position:'top',
+				icon: 'success',
+				title: 'Tu registro ha sido guardado',
+				showConfirmButton: false,
+				timer: 1900
+			  })
      	}
      });
 
@@ -124,16 +130,37 @@ function mostrar(id_mascota){
 }
 
 
-function eliminar(id_mascota){
-	bootbox.confirm("¿Esta seguro de eliminar este dato?", function(result){
-		if (result) {
-
-			$.post("../ajax/mascota.php?op=eliminar", {id_mascota : id_mascota }, function(e){
-				bootbox.alert(e);
-				tabla.ajax.reload();
-			});
+//alerta de eliminar
+function AlertarEliminacion(id_mascota) {
+	Swal.fire({
+		title: 'Está seguro?',
+		text: "¡No podrás revertir esto!",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		confirmButtonText: '¡Sí, bórralo!'
+	}).then((result) => {
+		if (result.isConfirmed) {
+			eliminar(id_mascota);
 		}
 	})
+}
+
+function eliminar(id_mascota){
+	    {
+
+			$.post("../ajax/mascota.php?op=eliminar", {id_mascota : id_mascota }, function(e){
+				
+				tabla.ajax.reload();
+				Swal.fire(
+					'¡Eliminado!',
+					'Su registro ha sido eliminado.',
+					'success'
+				)
+			});
+		}
+	
 }
 
 init();

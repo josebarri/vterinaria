@@ -80,9 +80,15 @@ function guardaryeditar(e){
      	processData: false,
 
      	success: function(datos){
-     		bootbox.alert(datos);
      		mostrarform(false);
      		tabla.ajax.reload();
+			 Swal.fire({
+				position:'top',
+				icon: 'success',
+				title: 'Tu registro ha sido guardado',
+				showConfirmButton: false,
+				timer: 1900
+			  })
      	}
      });
 

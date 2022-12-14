@@ -40,9 +40,9 @@ switch ($_GET["op"]) {
 				$propietario=new Propietario();
 	
 				$rspta=$propietario->select();
-	
+					echo '<option value="">seleccione</option>';
 				while ($reg=$rspta->fetch_object()) {
-					echo '<option value=' . $reg->id_propietario.'>'.$reg->num_documento.' - ' .$reg->nombre.'</option>';
+					echo ' <option value=' . $reg->id_propietario.'>'.$reg->num_documento.' - ' .$reg->nombre.'</option>';
 				}
 				break;
 
@@ -52,7 +52,7 @@ switch ($_GET["op"]) {
 
 		while ($reg=$rspta->fetch_object()) {
 			$data[]=array(
-			"0"=>   '<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->id_mascota.')"><i class="fa fa-pencil"></i></button>'. ' ' .'<button class="btn btn-danger btn-xs" onclick="eliminar('.$reg->id_mascota.')"><i class="fa fa-trash"></i></button>',
+			"0"=>   '<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->id_mascota.')"><i class="fa fa-pencil"></i></button>'. ' ' .'<button class="btn btn-danger btn-xs" onclick="AlertarEliminacion('.$reg->id_mascota.')"><i class="fa fa-trash"></i></button>',
 			"1"=>$reg->propietario,
             "2"=>$reg->nombre,
             "3"=>$reg->fecha,

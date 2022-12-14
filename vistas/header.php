@@ -38,6 +38,7 @@ if (strlen(session_id())<1)
 	<script src="librerias/bootstrap/js/bootstrap.js"></script>
 	<script src="librerias/alertifyjs/alertify.js"></script>
   <script src="librerias/select2/js/select2.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://kit.fontawesome.com/77d19e3e48.js" crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

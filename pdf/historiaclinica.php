@@ -152,6 +152,7 @@ $pdf->SetDrawColor(233, 243, 238);
 $pdf->SetTextColor(0,0,0);
 $pdf->Cell(160, 5, utf8_decode("HISTORIA CLINICA "), 1, 1, 'C','true');
 $pdf->Ln();
+
 while ($row = mysqli_fetch_assoc($citas)) {
     $pdf->SetFillColor(233, 243, 238);
     $pdf->SetDrawColor(233, 243, 238);

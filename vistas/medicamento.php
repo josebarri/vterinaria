@@ -20,7 +20,7 @@ if (!isset($_SESSION['nombre'])) {
                         <div class="box-header with-border">
                             <h1 class="box-title">Gestion de Medicamentos <button class="btn btn-success" onclick="mostrarform(true)" id="btnagregar"><i class="fa fa-plus-circle"></i> Agregar</button> </h1>
                             <div class="box-tools pull-right">
-                            <img src="img/veterinario.png" width="45" height="45" alt="">
+                                <img src="img/veterinario.png" width="45" height="45" alt="">
                             </div>
                         </div>
                         <!--box-header-->
@@ -66,21 +66,21 @@ if (!isset($_SESSION['nombre'])) {
                                     <label for="">Precio</label>
                                     <input class="form-control" type="number" name="precio" id="precio" required>
                                 </div>
-                               
+
                                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                                     <label for="">FechaV</label>
                                     <input class="form-control" type="date" name="fechaV" id="fechaV" required>
                                 </div>
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                                    <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
 
-                            <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                                    <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                                </div>
                         </div>
-                        </div>
 
-                       
 
-                        
+
+
                         </form>
                     </div>
                     <!--fin centro-->

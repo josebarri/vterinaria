@@ -6,13 +6,19 @@ $("#frmAcceso").on('submit', function(e)
 
 	$.post("../ajax/usuario.php?op=verificar",
         {"logina":logina, "clavea":clavea},
-        function(data)
+        function()
         {
-           if (data!="null")
+           if (data)
             {
-            	$(location).attr("href","escritorio.php");
+                $(location).attr("href","escritorio.php");
             }else{
-            	bootbox.alert("Usuario y/o Password incorrectos");
+            	Swal.fire({
+                    position: 'top',
+                    icon: 'warning',
+                    title: 'Usuario o contraseña incorrectos',
+                    showConfirmButton: false,
+                    timer: 1800
+                  })
             }
         });
 })

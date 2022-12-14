@@ -68,8 +68,11 @@ require 'header.php';
 
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
     <label for="">Propietario(*):</label>
-    <select name="id_propietario" id="id_propietario" class="form-control selectpicker" data-Live-search="true"></select>
-    </div>
+    <select name="id_propietario" id="id_propietario" class="form-control selectpicker" data-Live-search="true" required>
+      
+    </select>
+   
+  </div>
 
   
     <div class="form-group col-lg-6 col-md-6 col-xs-12">

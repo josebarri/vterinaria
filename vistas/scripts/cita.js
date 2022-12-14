@@ -61,8 +61,16 @@ function listar(){
                   'copyHtml5',
                   'excelHtml5',
                   'csvHtml5',
-                  'pdf'
+				  {
+					extend:'pdf',
+					'exportOptions': {
+						'columns':[1,2,3,4,5]
+					  },
+				  },
+				  
+
 		],
+		
 		"ajax":
 		{
 			url:'../ajax/cita.php?op=listar',
@@ -91,9 +99,15 @@ function guardaryeditar(e){
      	processData: false,
 
      	success: function(datos){
-     		bootbox.alert(datos);
      		mostrarform(false);
      		tabla.ajax.reload();
+			 Swal.fire({
+				position:'top',
+				icon: 'success',
+				title: 'Tu cita ha sido registrada',
+				showConfirmButton: false,
+				timer: 1900
+			  })
      	}
      });
 
@@ -118,17 +132,38 @@ function mostrar(id_cita){
 		})
 }
 
-
-function eliminar(id_cita){
-	bootbox.confirm("¿Esta seguro de eliminar este dato?", function(result){
-		if (result) {
-
-			$.post("../ajax/cita.php?op=eliminar", {id_cita : id_cita }, function(e){
-				bootbox.alert(e);
-				tabla.ajax.reload();
-			});
+//alerta de eliminar
+function AlertarEliminacion(id_cita) {
+	Swal.fire({
+		title: 'Está seguro?',
+		text: "¡No podrás revertir esto!",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		confirmButtonText: '¡Sí, bórralo!'
+	}).then((result) => {
+		if (result.isConfirmed) {
+			eliminar(id_cita);
 		}
 	})
+}
+
+function eliminar(id_cita){
+	
+		 {
+
+			$.post("../ajax/cita.php?op=eliminar", {id_cita : id_cita }, function(e){
+				
+				tabla.ajax.reload();
+				Swal.fire(
+					'¡Eliminado!',
+					'Su registro ha sido eliminado.',
+					'success'
+				)
+			});
+		}
+	
 }
 
 init();

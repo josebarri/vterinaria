@@ -44,7 +44,7 @@
                     <div class="mx-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="index.php">Inicio</a>
+                            <a class="nav-link text-white" href="nosotros.php">Inicio</a>
                         </li>
 
                         <li class="nav-item">
