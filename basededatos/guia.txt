@@ -1,1 +1,1 @@
-crear una base de datos en mysql con el nombre "veterinaria" e importar el archivo SQL, el usuario es admin y la contraseña igual
+crear una base de datos en mysql con el nombre "veterinaria" e importar el archivo SQL, el usuario es 1003502852 y la contraseña igual

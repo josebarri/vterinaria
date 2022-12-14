@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2022 a las 19:50:57
+-- Tiempo de generación: 14-12-2022 a las 02:48:58
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -40,11 +40,8 @@ CREATE TABLE `atender` (
 --
 
 INSERT INTO `atender` (`id_atender`, `id_cita`, `fecha`, `peso`, `total`) VALUES
-(1, 20, '2022-12-10', '4.00', '150000.00'),
-(2, 18, '2022-12-10', '3.00', '170000.00'),
-(3, 19, '2022-12-10', '22.00', '150000.00'),
-(4, 15, '2022-12-10', '2.00', '170000.00'),
-(5, 6, '2022-12-10', '3.00', '150000.00');
+(11, 28, '2022-12-13', '2.00', '65000.00'),
+(12, 29, '2022-12-13', '2.00', '28000.00');
 
 -- --------------------------------------------------------
 
@@ -66,12 +63,9 @@ CREATE TABLE `cita` (
 --
 
 INSERT INTO `cita` (`id_cita`, `id_mascota`, `motivo`, `fecha`, `hora`, `estado`) VALUES
-(6, 28, 'motivo', '2020-05-01', '12:20:00', 0),
-(15, 28, 'Consulta generar', '2020-01-01', '01:00:00', 0),
-(16, 30, 'motivo el que sea', '2020-05-01', '01:00:00', 0),
-(18, 29, 'motivo el que sea', '2020-05-03', '17:01:00', 0),
-(19, 28, 'Consulta generarfghjk', '2020-05-04', '02:00:00', 0),
-(20, 32, 'limpieza', '2022-12-14', '04:06:00', 0);
+(28, 36, 'Rabia', '2022-12-22', '02:30:00', 0),
+(29, 37, 'Corte de pelo', '2022-12-14', '10:30:00', 0),
+(30, 39, 'baño', '2022-12-15', '04:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -92,14 +86,9 @@ CREATE TABLE `detalle` (
 --
 
 INSERT INTO `detalle` (`id_detalle`, `id_atender`, `id_servicio`, `precio`, `descuento`) VALUES
-(1, 1, 4, '150000.00', '20000.00'),
-(2, 1, 1, '20000.00', '0.00'),
-(3, 2, 1, '20000.00', '0.00'),
-(4, 2, 4, '150000.00', '0.00'),
-(5, 3, 4, '150000.00', '0.00'),
-(6, 4, 1, '20000.00', '0.00'),
-(7, 4, 4, '150000.00', '0.00'),
-(8, 5, 4, '150000.00', '0.00');
+(18, 11, 1, '30000.00', '5000.00'),
+(19, 11, 9, '40000.00', '0.00'),
+(20, 12, 1, '30000.00', '2000.00');
 
 -- --------------------------------------------------------
 
@@ -124,11 +113,14 @@ CREATE TABLE `mascota` (
 --
 
 INSERT INTO `mascota` (`id_mascota`, `id_propietario`, `nombre`, `fecha`, `edad`, `sexo`, `especie`, `raza`, `color`) VALUES
-(28, 6, 'Cesar David Barrios', '2020-05-13', 12, 'Hembra', 'PERRO', 'Rowailer', 'negro'),
-(29, 6, 'Cesar David Barrios', '2020-05-13', 12, 'Hembra', 'PERRO', 'Rowailerr', 'negro'),
-(30, 4, 'mayu', '2020-05-03', 2, 'Hembra', 'GATO', 'fina', 'negro'),
-(31, 3, 'jose', '2020-05-01', 1, 'Macho', 'PERRO', 'Rowailer', 'negro'),
-(32, 9, 'akira', '2022-12-21', 23, 'Hembra', 'PERRO', 'husky', 'negro y blanco');
+(36, 23, 'Chester', '2022-10-13', 3, 'Macho', 'PERRO', 'Labradores', 'negro'),
+(37, 24, 'Kiara', '2021-12-13', 12, 'Hembra', 'PERRO', 'Husky', 'blanco-cafe'),
+(38, 25, 'Toby', '2022-07-13', 5, 'Macho', 'PERRO', 'Pug', 'Gris'),
+(39, 26, 'Baloo', '2022-09-13', 3, 'Hembra', 'PERRO', 'Pastor alemán', 'Negro-cafe'),
+(40, 27, 'Goofy', '2022-06-13', 6, 'Macho', 'PERRO', 'Pug', 'negro'),
+(41, 28, 'Canela', '2020-12-13', 24, 'Hembra', 'GATO', 'Angora turco', 'Blanco'),
+(42, 29, 'Aquiles', '2021-12-13', 12, 'Macho', 'GATO', 'Bobtail del Mekong', 'Blanco-negro'),
+(44, 31, 'moises', '2022-11-30', 23, 'Macho', 'PERRO', 'Pug', 'blanco');
 
 -- --------------------------------------------------------
 
@@ -174,12 +166,15 @@ CREATE TABLE `propietario` (
 --
 
 INSERT INTO `propietario` (`id_propietario`, `num_documento`, `nombre`, `telefono`, `direccion`, `email`) VALUES
-(2, 1079502372, 'Cesar Barrio', '3113176868', 'barrio san rafael carrera 19 # -37', 'cebasa02@gmail.com'),
-(3, 1012502378, 'Pedro contreras', '3113176868', 'barrio san  jose carrera 9 # -37', 'pedrojose@gmail.com'),
-(4, 1069502378, 'maira barrios', '2147483647', 'barrio san rafael carrera 19 # -37', 'maira@gmail.com'),
-(5, 1069412374, 'Maria Carmen Barrios', '3124136868', 'Barrio San Rafael', 'carmen@gmail.com'),
-(6, 1069783877, 'Junior Barrios Arrieta', '78954263', 'Barrio San Rafael carrera 19 # 3 -43', 'junior@gmail.com'),
-(9, 10036245, 'andres calle', '315246987', 'c14#13', 'jose@gmail.com');
+(23, 105698457, 'Jose Vicente Granado', '3814000', 'Calle 10 # 5-51', 'gafeivuloxa-1023@yopmail.com'),
+(24, 10459865, 'Luis Alfonso Encinas', '3814000', 'Calle 53 No 10-60/46', 'quoukeuddeuddotta-5224@yopmail.com'),
+(25, 10259876, 'Eduardo Jose Infante', '3814000', 'Calle 10 # 5-51', 'truxinoixanne-8232@yopmail.com'),
+(26, 10546895, 'Maria Julia Paez', '592-6001', 'Calle 9 # 9 – 62', 'teiwaullippouso-8472@yopmail.com'),
+(27, 10325469, 'Gloria Maria Quintero', '885-0663', 'Carrera 21 # 17 -63', 'trettoidauxaxu-8451@yopmail.com'),
+(28, 10459867, 'Jose Ramon Vicente', '885-0350', 'Calle 53 # 25A-35', 'paufraffaussassi-7071@yopmail.com'),
+(29, 10245638, 'Jesus Maria Costas', '670-0555', 'Carrera 20 B # 29-18. Barrio Pie de la Popa', 'sammeicexacreu-8839@yopmail.com'),
+(30, 10235468, 'Anna Maria Barrero', '333-98-98', 'Calle 7 # 19-35', 'vipokeuvonou-5672@yopmail.com'),
+(31, 30115425, 'jose barrios', '3156658467', 'calle4', 'cebasa02@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -200,8 +195,10 @@ CREATE TABLE `servicio` (
 --
 
 INSERT INTO `servicio` (`id_servicio`, `nombre`, `descripcion`, `precio`, `condicion`) VALUES
-(1, 'baño', 'bañar mascota con peso 2 a 10 kg', '20000.00', 1),
-(4, 'operacion', 'eficaz', '150000.00', 1);
+(1, 'Baño', 'Bañar mascota con peso 2 a 10 kg', '30000.00', 1),
+(4, 'Consulta', 'Consulta general', '50000.00', 1),
+(5, 'Peluquería', 'Corte de pelo', '20000.00', 1),
+(9, 'Vacunación', 'aplicacion de la vacuna necesaria', '40000.00', 1);
 
 -- --------------------------------------------------------
 
@@ -229,8 +226,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `tipo_documento`, `num_documento`, `direccion`, `telefono`, `email`, `cargo`, `login`, `clave`, `imagen`, `condicion`) VALUES
-(1, 'angel', 'DNI', '72154871', 'Calle los alpes 210', '547821', 'admin@gmail.com', 'Administrador', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '1670085215.png', 1),
-(8, 'Jose barrios Salgado', '', '1003512698', 'Cr19 3-37', '3156658978', 'josealfredobarriossalgado@gmail.com', NULL, 'josebarrios', '3fb9bf21fb54b5fc39cb886057d6efed6dc5e0614a13665e96723288328f8280', '1670616458.png', 1);
+(1, 'jose', 'DNI', '72154871', 'Calle los alpes 210', '547821', 'admin@gmail.com', 'Administrador', '1003502852', '2bcb4c485475e4c2871748721d7c72c3e8d647b0cfb58e5316df5df25e921ff3', '1670085215.png', 1);
 
 --
 -- Índices para tablas volcadas
@@ -241,7 +237,7 @@ INSERT INTO `usuario` (`idusuario`, `nombre`, `tipo_documento`, `num_documento`,
 --
 ALTER TABLE `atender`
   ADD PRIMARY KEY (`id_atender`,`id_cita`),
-  ADD KEY `id_cita` (`id_cita`);
+  ADD KEY `atender_ibfk_1` (`id_cita`);
 
 --
 -- Indices de la tabla `cita`
@@ -255,8 +251,8 @@ ALTER TABLE `cita`
 --
 ALTER TABLE `detalle`
   ADD PRIMARY KEY (`id_detalle`,`id_atender`,`id_servicio`),
-  ADD KEY `id_atender` (`id_atender`),
-  ADD KEY `id_servicio` (`id_servicio`);
+  ADD KEY `detalle_ibfk_1` (`id_atender`),
+  ADD KEY `detalle_ibfk_2` (`id_servicio`);
 
 --
 -- Indices de la tabla `mascota`
@@ -298,25 +294,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `atender`
 --
 ALTER TABLE `atender`
-  MODIFY `id_atender` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_atender` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `cita`
 --
 ALTER TABLE `cita`
-  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle`
 --
 ALTER TABLE `detalle`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id_mascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_mascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `medicamento`
@@ -328,19 +324,19 @@ ALTER TABLE `medicamento`
 -- AUTO_INCREMENT de la tabla `propietario`
 --
 ALTER TABLE `propietario`
-  MODIFY `id_propietario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_propietario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
-  MODIFY `id_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
@@ -350,26 +346,26 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `atender`
 --
 ALTER TABLE `atender`
-  ADD CONSTRAINT `atender_ibfk_1` FOREIGN KEY (`id_cita`) REFERENCES `cita` (`id_cita`);
+  ADD CONSTRAINT `atender_ibfk_1` FOREIGN KEY (`id_cita`) REFERENCES `cita` (`id_cita`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `cita`
 --
 ALTER TABLE `cita`
-  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id_mascota`);
+  ADD CONSTRAINT `cita_ibfk_1` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id_mascota`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `detalle`
 --
 ALTER TABLE `detalle`
-  ADD CONSTRAINT `detalle_ibfk_1` FOREIGN KEY (`id_atender`) REFERENCES `atender` (`id_atender`),
-  ADD CONSTRAINT `detalle_ibfk_2` FOREIGN KEY (`id_servicio`) REFERENCES `servicio` (`id_servicio`);
+  ADD CONSTRAINT `detalle_ibfk_1` FOREIGN KEY (`id_atender`) REFERENCES `atender` (`id_atender`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `detalle_ibfk_2` FOREIGN KEY (`id_servicio`) REFERENCES `servicio` (`id_servicio`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  ADD CONSTRAINT `mascota_ibfk_1` FOREIGN KEY (`id_propietario`) REFERENCES `propietario` (`id_propietario`);
+  ADD CONSTRAINT `mascota_ibfk_1` FOREIGN KEY (`id_propietario`) REFERENCES `propietario` (`id_propietario`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
