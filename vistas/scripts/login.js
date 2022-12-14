@@ -6,10 +6,17 @@ $("#frmAcceso").on('submit', function(e)
 
 	$.post("../ajax/usuario.php?op=verificar",
         {"logina":logina, "clavea":clavea},
-        function()
+        function(data)
         {
-           if (data)
+           if (data != "null")
             {
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: '¡Bienvenido!',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
                 $(location).attr("href","escritorio.php");
             }else{
             	Swal.fire({
@@ -17,7 +24,7 @@ $("#frmAcceso").on('submit', function(e)
                     icon: 'warning',
                     title: 'Usuario o contraseña incorrectos',
                     showConfirmButton: false,
-                    timer: 1800
+                    timer: 2100
                   })
             }
         });
